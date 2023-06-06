@@ -1,6 +1,6 @@
 package org.jenkinsci.plugins.customizebuildnow;
 
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import org.htmlunit.html.HtmlPage;
 import hudson.model.FreeStyleProject;
 import jenkins.model.Messages;
 import org.jenkinsci.plugins.workflow.job.WorkflowJob;
