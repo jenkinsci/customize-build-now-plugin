@@ -7,7 +7,7 @@ import jenkins.model.GlobalConfiguration;
 import jenkins.model.GlobalConfigurationCategory;
 import net.sf.json.JSONObject;
 import org.jenkinsci.Symbol;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 @Symbol("customizeBuildNow")
 @Extension
@@ -49,7 +49,7 @@ public class AlternateBuildLabelConfiguration extends GlobalConfiguration {
   }
 
   @Override
-  public boolean configure(StaplerRequest req, JSONObject json) throws FormException {
+  public boolean configure(StaplerRequest2 req, JSONObject json) throws FormException {
     super.configure(req, json);
     save();
     return true;

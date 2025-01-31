@@ -9,7 +9,7 @@ import jenkins.model.ParameterizedJobMixIn;
 import net.sf.json.JSONObject;
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 /**
  * Allow jobs to provide alternate label to "Build Now"
@@ -61,7 +61,7 @@ public class BuildNowTextProperty extends OptionalJobProperty<Job<?, ?>> {
         }
 
         @Override
-        public JobProperty<?> newInstance(StaplerRequest req, JSONObject formData) throws FormException {
+        public JobProperty<?> newInstance(StaplerRequest2 req, JSONObject formData) throws FormException {
             return formData.optBoolean("specified") ? super.newInstance(req, formData) : null;
         }
 
