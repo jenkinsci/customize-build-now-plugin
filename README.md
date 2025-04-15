@@ -22,3 +22,17 @@ appearance:
       alternateBuildNow: "Execute Now"
       alternateBuildWithParams: "Execute with Parameters"  
 ```
+
+
+### Pipeline Syntax
+##### Scripted
+```groovy
+properties([customizeBuildNow(labels(alternateBuildButton: 'Execute', alternateBuildNow: 'Execute Now', alternateBuildWithParams: 'Execute with Parameters'))])
+```
+
+##### Declarative
+```groovy
+options {
+  customizeBuildNow labels(alternateBuildButton: 'Run', alternateBuildNow: 'Run Now', alternateBuildWithParams: 'Run with Parameters')
+}
+```
